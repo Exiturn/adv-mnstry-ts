@@ -37,7 +37,7 @@ const Loader = () => {
         duration: 0.1,
         ease: [0.42, 0, 0.58, 1] 
       }}
-      className="w-screen h-screen flex justify-center items-center absolute top-0 left-0 transition-all duration-700 bg-white"
+      className="w-screen h-screen flex justify-center items-center absolute top-0 left-0 transition-all duration-700 bg-white z-[3]"
     >
       <h1 className="text-[10vw]">
         <p>ADV/MNSTRY<span className="text-[3vw]">®</span></p>

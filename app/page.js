@@ -1,4 +1,5 @@
 "use client";
+import Navbar from "@/components/Navbar/Navbar";
 import Hero from "@/components/Hero/Hero";
 import Awards from "@/components/Awards/Awards";
 import Loader from "@/components/Loader/Loader";
@@ -19,6 +20,7 @@ const HomePage = () => {
 
   return (
     <div className="relative">
+      <Navbar />
       <Hero />
       <Awards />
       <Loader />
