@@ -4,7 +4,7 @@ import { motion } from "framer-motion";
 
 const loader = {
   initial: {
-    opacity: 0,
+    opacity: 1,
     translateY: "0",
   },
   animate: {
@@ -17,6 +17,15 @@ const loader = {
   }
 };
 
+const loaderHeader = {
+  initial: {
+    opacity: 0,
+  },
+  animate: {
+    opacity: 1,
+  }
+}
+
 const Loader = () => {
   return (
     <motion.div
@@ -24,12 +33,16 @@ const Loader = () => {
       initial="initial"
       animate="animate"
       exit="exit"
-      transition={{ duration: 0.75 }}
-      className="w-screen h-screen flex justify-center items-center bg-white absolute top-0 left-0 translate-y-[0%] transition-all duration-700"
+      transition={{ 
+        delay: 0.2,
+        duration: 0.2,
+        ease: [0.42, 0, 0.58, 1] 
+      }}
+      className="w-screen h-screen flex justify-center items-center bg-white absolute top-0 left-0 translate-y-[0%] transition-all duration-1000"
     >
-      <h1 className="text-wrap text-[10vw] font-semibold">
+      <motion.h1 variants={loaderHeader} initial="initial" animate="animate" transition={{duration: 0.15}} className="text-wrap text-[10vw] font-semibold">
         ADV/MNSTRY<span className="text-[3vw]">®</span>
-      </h1>
+      </motion.h1>
     </motion.div>
   );
 };
