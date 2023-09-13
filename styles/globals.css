@@ -25,6 +25,10 @@ body {
   overflow-x: hidden;
 }
 
+.text-blend {
+    mix-blend-mode: difference;
+}
+
 html.lenis {
   height: auto;
 }
@@ -55,6 +59,7 @@ html.lenis {
     opacity: .75;
     visibility: visible;
     z-index: 2;
+    pointer-events: none;
   }
   
   @keyframes bg-animation {
