@@ -2,6 +2,13 @@
 @tailwind components;
 @tailwind utilities;
 
+/* 
+    COLOR PALETTE:
+    #252422
+    #f9cdcd
+    #f4f4f4
+*/
+
 * {
   box-sizing: border-box;
   margin: 0;
@@ -14,6 +21,7 @@
 body {
   background-color: #f4f4f4;
   color: #252422ff;
+  transition: color 0.65s cubic-bezier(0.72,0,0.28,1), background-color 0.65s cubic-bezier(0.72,0,0.28,1);
   overflow-x: hidden;
 }
 
@@ -32,3 +40,33 @@ html.lenis {
 .lenis.lenis-scrolling iframe {
   pointer-events: none;
 }
+
+.bg {
+    position: fixed;
+    top: -50%;
+    left: -50%;
+    right: -50%;
+    bottom: -50%;
+    width: 200%;
+    height: 200vh;
+    background: transparent url('http://assets.iceable.com/img/noise-transparent.png') repeat 0 0;
+    background-repeat: repeat;
+    animation: bg-animation .2s infinite;
+    opacity: .75;
+    visibility: visible;
+    z-index: 2;
+  }
+  
+  @keyframes bg-animation {
+      0% { transform: translate(0,0) }
+      10% { transform: translate(-5%,-5%) }
+      20% { transform: translate(-10%,5%) }
+      30% { transform: translate(5%,-10%) }
+      40% { transform: translate(-5%,15%) }
+      50% { transform: translate(-10%,5%) }
+      60% { transform: translate(15%,0) }
+      70% { transform: translate(0,10%) }
+      80% { transform: translate(-15%,0) }
+      90% { transform: translate(10%,5%) }
+      100% { transform: translate(5%,0) }
+  }
