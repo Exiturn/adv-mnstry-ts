@@ -1,5 +1,5 @@
-"use client"
-import { motion, useAnimation } from 'framer-motion'
+"use client";
+import { motion, useAnimation } from "framer-motion";
 
 const navItems = [
   {
@@ -28,9 +28,8 @@ const navItems = [
   },
 ];
 
-
 const Navbar = () => {
-  const dynamidPadding = { padding: 'calc(1.5rem + 2vw) 3vw' }
+  const dynamidPadding = { padding: "calc(0.5rem + 2.5vh) 3vw" };
 
   return (
     <nav
@@ -41,16 +40,24 @@ const Navbar = () => {
 
       <ul className="hidden lg:flex justify-center items-center gap-x-[2vw] mr-[3rem]">
         {navItems.map((item, index) => (
-          <li className="flex justify-center items-center cursor-pointer text-[1rem] h-[25px] px-[1rem]" key={index}>
-            <p className="navItem relative text-center font-semibold">{item.name}</p>
+          <li
+            className="flex justify-center items-center cursor-pointer text-[1rem] h-[25px] px-[1rem]"
+            key={index}
+          >
+            <p className="navItem relative text-center font-semibold">
+              {item.name}
+            </p>
           </li>
         ))}
       </ul>
 
-      <div className="flex justify-center gap-x-[1px] hover:gap-x-[5px] transition-all duration-200 ease-in-out cursor-pointer w-[2rem]">
-        <p className="flex items-center font-bold text-[2rem] mb-3">.</p>
-        <p className="flex items-center font-bold text-[2rem] mb-3">.</p>
-        <p className="flex items-center font-bold text-[2rem] mb-3">.</p>
+      <div>
+        <div className="hidden lg:flex justify-center gap-x-[1px] hover:gap-x-[5px] transition-all duration-200 ease-in-out cursor-pointer w-[2rem]">
+          <p className="flex items-center font-bold text-[2rem] mb-3">.</p>
+          <p className="flex items-center font-bold text-[2rem] mb-3">.</p>
+          <p className="flex items-center font-bold text-[2rem] mb-3">.</p>
+        </div>
+        <button className="uppercase block lg:hidden font-semibold">Menu</button>
       </div>
     </nav>
   );
