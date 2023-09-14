@@ -16,6 +16,10 @@
   letter-spacing: -0.08125rem;
 }
 
+html {
+  overflow-x: hidden;
+}
+
 body {
   background-color: #f4f4f4;
   color: #252422ff;
