@@ -42,25 +42,22 @@ const navbarAnimation = {
 
 const Navbar = () => {
   const dynamicPadding = { padding: "calc(0.5rem + 2.5vh) 3vw" };
-  let lastScrollY = window.scrollY;
-
   const [isAnimating, setIsAnimating] = useState(false);
 
   {/* Watches for scroll direction */}
   useEffect(() => {
-    window.addEventListener("scroll", () => {
+    let lastScrollY = window.scrollY;
+    document.addEventListener("scroll", () => {
       const currentScrollY = window.scrollY;
 
       if (currentScrollY > lastScrollY) {
-        console.log("Scrolling down");
         setIsAnimating(true);
       } else if (currentScrollY < lastScrollY) {
         setIsAnimating(false);
-        console.log("Scrolling up");
       }
       lastScrollY = currentScrollY;
     });
-  }, [isAnimating]);
+  }, []);
 
   return (
     <motion.nav
@@ -71,7 +68,7 @@ const Navbar = () => {
       variants={navbarAnimation}
       transition={{ duration: 0.35, ease: `linear` }}
     >
-      <h1 className="text-[2rem] font-bold">ADV/MNSTRY®</h1>
+      <h1 className="text-[1.75rem] font-bold">ADV/MNSTRY<span className="font-extralight">®</span></h1>
 
       <ul className="hidden lg:flex justify-center items-center gap-x-[2vw] mr-[3rem]">
         {navItems.map((item, index) => (
@@ -79,7 +76,7 @@ const Navbar = () => {
             className="flex justify-center items-center cursor-pointer text-[1rem] h-[25px] px-[1rem]"
             key={index}
           >
-            <p className="navItem relative text-center font-semibold">
+            <p className="navItem relative text-center font-medium">
               {item.name}
             </p>
           </li>
