@@ -40,7 +40,7 @@ const Loader = () => {
       className="w-screen h-screen flex justify-center items-center absolute top-0 left-0 transition-all duration-700 bg-white z-[3]"
     >
       <h1 className="text-[10vw]">
-        <p className="font-bold">ADV<br />/ MNSTRY<span className="text-[3vw]">®</span></p>
+        <p className="font-bold leading-normal">ADV<br />/ MNSTRY<span className="text-[3vw]">®</span></p>
         <motion.div variants={loaderHeader} initial="initial" animate="animate" transition={{duration: 0.5, ease: [0.42, 0, 0.58, 1], delay: 0}} className="bg-white w-full h-[55%] absolute"/>
       </h1>
     </motion.div>
