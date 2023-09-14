@@ -1,6 +1,6 @@
 "use client";
-import Navbar from "@/components/Navbar/Navbar";
 import Hero from "@/components/Hero/Hero";
+import About from "@/components/About/About";
 import Awards from "@/components/Awards/Awards";
 import Loader from "@/components/Loader/Loader";
 import Lenis from "@studio-freight/lenis";
@@ -22,6 +22,7 @@ const HomePage = () => {
     <div className="relative">
       <Hero />
       <Awards />
+      <About />
       <Loader />
     </div>
   );

@@ -1,6 +1,8 @@
 "use client";
 import { motion, useAnimation } from "framer-motion";
+import { useEffect, useState } from "react";
 
+{/* Variable Declarations */}
 const navItems = [
   {
     id: "item1",
@@ -27,14 +29,47 @@ const navItems = [
     name: "CONTACT",
   },
 ];
+const navbarAnimation = {
+  initial: {
+    opacity: 1,
+    translateY: 0,
+  },
+  animate: {
+    opacity: 0,
+    translateY: "-50vh",
+  },
+};
 
 const Navbar = () => {
-  const dynamidPadding = { padding: "calc(0.5rem + 2.5vh) 3vw" };
+  const dynamicPadding = { padding: "calc(0.5rem + 2.5vh) 3vw" };
+  let lastScrollY = window.scrollY;
+
+  const [isAnimating, setIsAnimating] = useState(false);
+
+  {/* Watches for scroll direction */}
+  useEffect(() => {
+    window.addEventListener("scroll", () => {
+      const currentScrollY = window.scrollY;
+
+      if (currentScrollY > lastScrollY) {
+        console.log("Scrolling down");
+        setIsAnimating(true);
+      } else if (currentScrollY < lastScrollY) {
+        setIsAnimating(false);
+        console.log("Scrolling up");
+      }
+      lastScrollY = currentScrollY;
+    });
+  }, [isAnimating]);
 
   return (
-    <nav
+    <motion.nav
       className={`fixed flex justify-between items-center bg-transparent text-white w-screen z-[3] text-center`}
-      style={dynamidPadding}
+      style={dynamicPadding}
+      initial="initial"
+      animate={isAnimating ? `animate` : `initial`}
+      variants={navbarAnimation}
+      transition={{ duration: 0.35, ease: `linear` }}
     >
       <h1 className="text-[2rem] font-bold">ADV/MNSTRY®</h1>
 
@@ -57,9 +92,11 @@ const Navbar = () => {
           <p className="flex items-center font-bold text-[2rem] mb-3">.</p>
           <p className="flex items-center font-bold text-[2rem] mb-3">.</p>
         </div>
-        <button className="uppercase block lg:hidden font-semibold">Menu</button>
+        <button className="uppercase block lg:hidden font-semibold">
+          Menu
+        </button>
       </div>
-    </nav>
+    </motion.nav>
   );
 };
 
