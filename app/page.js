@@ -20,7 +20,6 @@ const HomePage = () => {
 
   return (
     <div className="relative">
-      <Navbar />
       <Hero />
       <Awards />
       <Loader />
