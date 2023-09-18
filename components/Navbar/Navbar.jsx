@@ -52,7 +52,7 @@ const Navbar = () => {
 
       if (currentScrollY > lastScrollY) {
         setIsAnimating(true);
-      } else if (currentScrollY < lastScrollY) {
+      } else if (currentScrollY < lastScrollY || currentScrollY === 0) {
         setIsAnimating(false);
       }
       lastScrollY = currentScrollY;

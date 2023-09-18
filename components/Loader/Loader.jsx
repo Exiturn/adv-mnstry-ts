@@ -35,7 +35,7 @@ const Loader = () => {
       animate="animate"
       exit="exit"
       transition={{ 
-        delay: 1,
+        delay: 0.75,
         duration: 0.1,
         ease: [0.42, 0, 0.58, 1] 
       }}
@@ -43,7 +43,7 @@ const Loader = () => {
     >
       <h1 className="text-[10vw]">
         <p className="font-bold leading-tight">ADV<br />/ MNSTRY<span className="text-[3vw]">®</span></p>
-        <motion.div variants={loaderHeader} initial="initial" animate="animate" exit="exit" transition={{duration: 0.5, ease: [0.42, 0, 0.58, 1], delay: 0.75}} className="bg-white w-full h-[55%] absolute"/>
+        <motion.div variants={loaderHeader} initial="initial" animate="animate" exit="exit" transition={{duration: 0.5, ease: [0.42, 0, 0.58, 1], delay: 0.3}} className="bg-white w-full h-[55%] absolute"/>
       </h1>
     </motion.div>
   );
