@@ -74,9 +74,9 @@ export default function Navbar() {
     document.addEventListener("scroll", () => {
       const currentScrollY = window.scrollY;
 
-      if (currentScrollY > lastScrollY) {
+      if (currentScrollY > lastScrollY && currentScrollY > 250) {
         setIsAnimating(true);
-      } else if (currentScrollY < lastScrollY || currentScrollY === 0) {
+      } else if (currentScrollY < lastScrollY) {
         setIsAnimating(false);
       }
       lastScrollY = currentScrollY;
@@ -109,7 +109,7 @@ export default function Navbar() {
       </ul>
 
       <div>
-        <div className="hidden lg:flex justify-center gap-x-[1px] hover:gap-x-[5px] transition-all duration-200 ease-in-out cursor-pointer w-[2rem]">
+        <div className="hidden lg:flex justify-center gap-x-[1px] hover:gap-x-[5px] duration-[25ms] ease-in-out cursor-pointer w-[2rem]">
           <p className="flex items-center font-bold text-[2rem] mb-3">.</p>
           <p className="flex items-center font-bold text-[2rem] mb-3">.</p>
           <p className="flex items-center font-bold text-[2rem] mb-3">.</p>
