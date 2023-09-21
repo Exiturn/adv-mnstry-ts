@@ -43,6 +43,30 @@ const navbarAnimation = {
 const Navbar = () => {
   const dynamicPadding = { padding: "calc(0.5rem + 2.5vh) 3vw" };
   const [isAnimating, setIsAnimating] = useState(false);
+  const [navbarStyle, setNavbarStyle] = useState({});
+
+  const handleScroll = () => {
+    const windowHeight = window.innerHeight;
+    const scrollY = window.scrollY;
+    const halfwayPoint = windowHeight / 2;
+
+    if (scrollY > halfwayPoint) {
+      const newNavbarStyle = {
+        background: '#f4f4f4',
+        color: 'black',
+      };
+
+      setNavbarStyle(newNavbarStyle);
+    } else {
+      setNavbarStyle({});
+    };
+
+    window.addEventListener('scroll', handleScroll);
+
+    return () => {
+      window.removeEventListener('scroll', handleScroll);
+    }
+  }
 
   {/* Watches for scroll direction */}
   useEffect(() => {
@@ -57,12 +81,13 @@ const Navbar = () => {
       }
       lastScrollY = currentScrollY;
     });
+    handleScroll();
   }, []);
 
   return (
     <motion.nav
-      className={`fixed flex justify-between items-center bg-transparent text-white w-screen z-[3] text-center`}
-      style={dynamicPadding}
+      className={`fixed flex justify-between items-center bg-transparent text-white w-screen z-[3] text-center transition-colors ease-in-out duration-500`}
+      style={{...dynamicPadding, ...navbarStyle}}
       initial="initial"
       animate={isAnimating ? `animate` : `initial`}
       variants={navbarAnimation}
