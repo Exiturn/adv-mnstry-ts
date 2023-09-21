@@ -111,6 +111,7 @@ html.lenis {
   bottom: 0;
   left: 0;
   background-color: #f4f4f4;
+  mix-blend-mode: difference;
   transform-origin: bottom right;
   transition: transform 0.25s ease-out;
 }
