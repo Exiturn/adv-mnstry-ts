@@ -40,7 +40,7 @@ const navbarAnimation = {
   },
 };
 
-const Navbar = () => {
+export default function Navbar() {
   const dynamicPadding = { padding: "calc(0.5rem + 2.5vh) 3vw" };
   const [isAnimating, setIsAnimating] = useState(false);
   const [navbarStyle, setNavbarStyle] = useState({});
@@ -121,5 +121,3 @@ const Navbar = () => {
     </motion.nav>
   );
 };
-
-export default Navbar;

@@ -2,12 +2,12 @@
 import { useRef } from "react";
 import { useCursorTracker } from "@/hooks/useCursorTracker";
 
-const Hero = () => {
+const Hero: React.FC = () => {
   const targetRef = useRef(null);
   const cursorPosition = useCursorTracker(targetRef);
   return (
     <div
-      className="w-screen h-screen relative flex justify-center items-center overflow-y-hidden"
+      className="w-screen h-screen relative flex justify-center items-center overflow-y-hidden cursor-none"
       ref={targetRef}
     >
       <video

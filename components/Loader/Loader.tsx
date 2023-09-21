@@ -27,7 +27,7 @@ const loaderHeader = {
   }
 }
 
-const Loader = () => {
+const Loader: React.FC = () => {
   return (
     <motion.div
       variants={loader}
