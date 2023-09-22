@@ -13,8 +13,9 @@
   box-sizing: border-box;
   margin: 0;
   padding: 0;
-  letter-spacing: 0.0125rem;
+  letter-spacing: -0.0095em;
   font-size: 0.96615em;
+  vertical-align: baseline;
 }
 
 html {
@@ -102,7 +103,9 @@ html.lenis {
     transform: translate(5%, 0);
   }
 }
-
+/* 
+  ///// NAV STYLES 
+*/
 .navItem:after {
   content: "";
   position: absolute;
@@ -116,12 +119,17 @@ html.lenis {
   transform-origin: bottom right;
   transition: transform 0.25s ease-out;
 }
-
 .navItem:hover::after {
   transform: scaleX(1);
   transform-origin: bottom left;
 }
+/* 
+  /////
+*/
 
+/* 
+  ///// HERO STYLES
+*/
 .heroCta:after {
   content: "ADV/MNSTRY®";
   position: absolute;
@@ -130,4 +138,17 @@ html.lenis {
   color: white;
   width: 100%;
   height: 1rem;
+}
+/* 
+  /////
+*/
+
+/* 
+  ///// AWARDS STYLES
+*/
+.awardAnchor {
+  @apply inline-flex w-full flex-col justify-center items-center decoration-2 hover:underline
+}
+.awardFigure {
+  @apply sm:w-[75%] md:w-[55%] lg:w-[40%] min-h-[8vw] transition-transform ease-in-out hover:scale-[1.05] flex items-center
 }

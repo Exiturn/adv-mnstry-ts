@@ -93,7 +93,7 @@ export default function Navbar() {
       variants={navbarAnimation}
       transition={{ duration: 0.35, ease: `linear` }}
     >
-      <h1 className="text-[1.5rem] font-bold">ADV/MNSTRY<span className="font-extralight">®</span></h1>
+      <h1 className="text-[1.5rem] font-bold tracking-tighter">ADV/MNSTRY<span className="font-bold">®</span></h1>
 
       <ul className="hidden lg:flex justify-center items-center gap-x-[2vw] mr-[3rem]">
         {navItems.map((item, index) => (
