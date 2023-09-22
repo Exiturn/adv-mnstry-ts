@@ -2,7 +2,7 @@
 import { motion, useAnimation } from "framer-motion";
 import { useEffect, useState } from "react";
 
-{/* Variable Declarations */}
+{/* Variable & Interface Declarations */}
 const navItems = [
   {
     id: "item1",
@@ -42,13 +42,13 @@ const navbarAnimation = {
 
 export default function Navbar() {
   const dynamicPadding = { padding: "calc(0.5rem + 2.5vh) 3vw" };
-  const [isAnimating, setIsAnimating] = useState(false);
-  const [navbarStyle, setNavbarStyle] = useState({});
+  const [isAnimating, setIsAnimating] = useState<boolean>(false);
+  const [navbarStyle, setNavbarStyle] = useState<Object>({});
 
   const handleScroll = () => {
-    const windowHeight = window.innerHeight;
-    const scrollY = window.scrollY;
-    const halfwayPoint = windowHeight / 2;
+    const windowHeight: number = window.innerHeight;
+    const scrollY: number = window.scrollY;
+    const halfwayPoint: number = windowHeight / 2;
 
     if (scrollY > halfwayPoint) {
       const newNavbarStyle = {
@@ -70,11 +70,11 @@ export default function Navbar() {
 
   {/* Watches for scroll direction */}
   useEffect(() => {
-    let lastScrollY = window.scrollY;
+    let lastScrollY: number = window.scrollY;
     document.addEventListener("scroll", () => {
-      const currentScrollY = window.scrollY;
+      const currentScrollY: number = window.scrollY;
 
-      if (currentScrollY > lastScrollY && currentScrollY > 250) {
+      if (currentScrollY > lastScrollY && currentScrollY > 100) {
         setIsAnimating(true);
       } else if (currentScrollY < lastScrollY) {
         setIsAnimating(false);
@@ -93,12 +93,12 @@ export default function Navbar() {
       variants={navbarAnimation}
       transition={{ duration: 0.35, ease: `linear` }}
     >
-      <h1 className="text-[1.75rem] font-bold">ADV/MNSTRY<span className="font-extralight">®</span></h1>
+      <h1 className="text-[1.5rem] font-bold">ADV/MNSTRY<span className="font-extralight">®</span></h1>
 
       <ul className="hidden lg:flex justify-center items-center gap-x-[2vw] mr-[3rem]">
         {navItems.map((item, index) => (
           <li
-            className="flex justify-center items-center cursor-pointer text-[1rem] h-[25px] px-[1rem]"
+            className="flex justify-center items-center cursor-pointer h-[25px] px-[1rem]"
             key={index}
           >
             <p className="navItem relative text-center font-medium">
@@ -110,9 +110,9 @@ export default function Navbar() {
 
       <div>
         <div className="hidden lg:flex justify-center gap-x-[1px] hover:gap-x-[5px] duration-[25ms] ease-in-out cursor-pointer w-[2rem]">
-          <p className="flex items-center font-bold text-[2rem] mb-3">.</p>
-          <p className="flex items-center font-bold text-[2rem] mb-3">.</p>
-          <p className="flex items-center font-bold text-[2rem] mb-3">.</p>
+          <p className="flex items-center font-bold text-[1.75rem] mb-3">.</p>
+          <p className="flex items-center font-bold text-[1.75rem] mb-3">.</p>
+          <p className="flex items-center font-bold text-[1.75rem] mb-3">.</p>
         </div>
         <button className="uppercase block lg:hidden font-semibold">
           Menu
