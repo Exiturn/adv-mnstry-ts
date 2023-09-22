@@ -13,7 +13,7 @@ const Awards: React.FC = () => {
               alt="ad age logo"
             />
           </figure>
-          <span className="uppercase text-center w-[90%] xl:w-[50%] mt-[3.5rem] leading-normal font-medium">
+          <span className="text-[0.8em] lg:text-[0.965em] uppercase text-center w-[90%] xl:w-[50%] mt-[3.5rem] leading-tight font-medium">
             Design and branding agency of the year
           </span>
         </a>
@@ -29,7 +29,7 @@ const Awards: React.FC = () => {
               alt="ad age logo"
             />
           </figure>
-          <span className="uppercase text-center w-[90%] xl:w-[50%] mt-[3.5rem] leading-normal font-medium">
+          <span className="text-[0.8em] lg:text-[0.965em] uppercase text-center w-[90%] xl:w-[50%] mt-[3.5rem] leading-tight font-medium">
             agency of the year
           </span>
         </a>
@@ -45,7 +45,7 @@ const Awards: React.FC = () => {
               alt="ad age logo"
             />
           </figure>
-          <span className="uppercase text-center w-[90%] xl:w-[50%] mt-[3.5rem] leading-normal font-medium">
+          <span className="text-[0.8em] lg:text-[0.965em] uppercase text-center w-[90%] xl:w-[50%] mt-[3.5rem] leading-tight font-medium">
             Digital Innovation agency of the year finalist
           </span>
         </a>
