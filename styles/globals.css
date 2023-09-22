@@ -150,5 +150,5 @@ html.lenis {
   @apply inline-flex w-full flex-col justify-center items-center decoration-2 hover:underline
 }
 .awardFigure {
-  @apply sm:w-[75%] md:w-[55%] lg:w-[40%] min-h-[8vw] transition-transform ease-in-out hover:scale-[1.05] flex items-center
+  @apply sm:w-[75%] md:w-[55%] lg:w-[40%] min-h-[50px] md:min-h-[8vw] transition-transform ease-in-out hover:scale-[1.05] flex items-center
 }
