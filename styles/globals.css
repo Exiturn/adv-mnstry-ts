@@ -104,7 +104,7 @@ html.lenis {
   }
 }
 /* 
-  ///// NAV STYLES 
+  ///// NAV STYLES /////
 */
 .navItem:after {
   content: "";
@@ -128,7 +128,7 @@ html.lenis {
 */
 
 /* 
-  ///// HERO STYLES
+  ///// HERO STYLES /////
 */
 .heroCta:after {
   content: "ADV/MNSTRY®";
@@ -144,11 +144,31 @@ html.lenis {
 */
 
 /* 
-  ///// AWARDS STYLES
+  ///// AWARDS STYLES /////
 */
 .awardAnchor {
   @apply inline-flex w-full flex-col justify-center items-center decoration-2 hover:underline
 }
 .awardFigure {
   @apply sm:w-[75%] md:w-[55%] lg:w-[40%] min-h-[50px] md:min-h-[8vw] transition-transform ease-in-out hover:scale-[1.05] flex items-center
+}
+
+/* 
+  ///// ABOUT STYLES /////
+*/
+.aboutButton:after {
+  content: '';
+  position: absolute;
+  z-index: -1;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 200%;
+  background-color: black;
+  transform: translateY(100%);
+  transition: transform 0.35s ease-in-out;
+}
+
+.aboutButton:hover::after {
+  transform: translateY(0%);
 }

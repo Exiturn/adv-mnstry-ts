@@ -9,7 +9,7 @@ const About: React.FC = () => {
             products, services, and eCommerce experiences that turn cultural
             values into company value.
           </span>
-          <button className="w-[50vw] md:w-[12vw] rounded-full border-[1px] py-[0.5rem] px-[2.5vw] mt-[4em] border-black text-center text-[1em] font-bold uppercase">
+          <button className="aboutButton relative w-[50vw] h-[4vh] md:w-[12vw] rounded-full border-[1px] py-[0.5rem] px-[2.5vw] mt-[4em] border-black text-center text-[1em] font-bold uppercase overflow-y-hidden z-2 transition-colors delay-0 hover:delay-[175ms] duration-200 hover:text-white">
             See the work
           </button>
         </div>
