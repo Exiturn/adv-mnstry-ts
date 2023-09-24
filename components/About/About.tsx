@@ -1,3 +1,5 @@
+import Image from 'next/image';
+
 const About: React.FC = () => {
   return (
     <main className="w-screen pb-[15vw] px-[5.4vw] xl:px-[8rem]">
@@ -22,7 +24,7 @@ const About: React.FC = () => {
       <ul className="flex gap-6 w-full mt-[5rem] overflow-x-auto">
         <li className="min-w-[1/3] w-full h-full about-li">
           <figure className="overflow-hidden min-w-[12rem]">
-            <img className="scale-[1.05] transition-transform duration-300" src="/assets/brands/arcteryx.jpg" alt="arcteryx" />
+            {/* <img className="scale-[1.05] transition-transform duration-300" src="/assets/brands/arcteryx.jpg" alt="arcteryx" /> */}
           </figure>
           <div className="xl:w-3/5 uppercase mt-6">
             <h2 className="about-h2">Arc'teryx</h2>
@@ -34,7 +36,7 @@ const About: React.FC = () => {
 
         <li className="min-w-[1/3] w-full h-full about-li">
           <figure className="overflow-hidden min-w-[12rem]">
-            <img className="h-full scale-[1.05] transition-transform duration-300" src="/assets/brands/manorsgolf.jpg" alt="manors golf" />
+            {/* <img className="h-full scale-[1.05] transition-transform duration-300" src="/assets/brands/manorsgolf.jpg" alt="manors golf" /> */}
           </figure>
           <div className="xl:w-3/5 uppercase mt-6">
             <h2 className="about-h2">Manors Golf</h2>
