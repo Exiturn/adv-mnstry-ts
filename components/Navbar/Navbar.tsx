@@ -45,29 +45,6 @@ export default function Navbar() {
   const [isAnimating, setIsAnimating] = useState<boolean>(false);
   const [navbarStyle, setNavbarStyle] = useState<Object>({});
 
-  const handleScroll = () => {
-    const windowHeight: number = window.innerHeight;
-    const scrollY: number = window.scrollY;
-    const halfwayPoint: number = windowHeight / 2;
-
-    if (scrollY > halfwayPoint) {
-      const newNavbarStyle = {
-        background: '#f4f4f4',
-        color: 'black',
-      };
-
-      setNavbarStyle(newNavbarStyle);
-    } else {
-      setNavbarStyle({});
-    };
-
-    window.addEventListener('scroll', handleScroll);
-
-    return () => {
-      window.removeEventListener('scroll', handleScroll);
-    }
-  }
-
   {/* Watches for scroll direction */}
   useEffect(() => {
     let lastScrollY: number = window.scrollY;
@@ -81,6 +58,28 @@ export default function Navbar() {
       }
       lastScrollY = currentScrollY;
     });
+    const handleScroll = () => {
+      const windowHeight: number = window.innerHeight;
+      const scrollY: number = window.scrollY;
+      const halfwayPoint: number = windowHeight / 2;
+  
+      if (scrollY > halfwayPoint) {
+        const newNavbarStyle = {
+          background: '#f4f4f4',
+          color: 'black',
+        };
+  
+        setNavbarStyle(newNavbarStyle);
+      } else {
+        setNavbarStyle({});
+      };
+  
+      window.addEventListener('scroll', handleScroll);
+  
+      return () => {
+        window.removeEventListener('scroll', handleScroll);
+      }
+    };
     handleScroll();
   }, []);
 
