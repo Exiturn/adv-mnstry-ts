@@ -2,8 +2,8 @@ import Image from 'next/image';
 
 const About: React.FC = () => {
   return (
-    <main className="w-screen pb-[15vw] px-[5.4vw] xl:px-[8rem]">
-      <figure className="h-[0.1rem] w-full bg-black mb-[8.5em]" />
+    <main className="w-screen pb-[10vw] px-[5.4vw] xl:px-[8rem]">
+      <figure className="h-[0.1em] w-full bg-black mb-[8.5em]" />
 
       <section className="flex flex-col xl:flex-row items-start xl:items-center gap-5">
         <div className="w-full md:w-[50vw] flex flex-col justify-evenly items-start">
@@ -21,12 +21,12 @@ const About: React.FC = () => {
         </div>
       </section>
 
-      <ul className="flex gap-6 w-full mt-[5rem] overflow-x-auto">
+      <ul className="flex gap-6 w-full mt-[5rem] overflow-x-auto pb-6">
         <li className="min-w-[1/3] w-full h-full about-li">
           <figure className="overflow-hidden min-w-[12rem] max-w-[30vw]">
             <img className="scale-[1.05] transition-transform duration-300" src="/assets/brands/arcteryx.jpg" alt="arcteryx" />
           </figure>
-          <div className="xl:w-3/5 uppercase mt-6">
+          <div className="xl:w-3/5 uppercase mt-[1rem]">
             <h2 className="about-h2">Arc&apos;teryx</h2>
             <p className="aboutSpan">
               An ecommerce experience driven by arc&apos;teryx&apos;s brand mission
@@ -38,7 +38,7 @@ const About: React.FC = () => {
           <figure className="overflow-hidden min-w-[12rem] max-w-[30vw]">
             <img className="scale-[1.05] transition-transform duration-300" src="/assets/brands/manorsgolf.jpg" alt="manorsgolf" />
           </figure>
-          <div className="xl:w-3/5 uppercase mt-6">
+          <div className="xl:w-3/5 uppercase mt-[1rem]">
             <h2 className="about-h2">Manors Golf</h2>
             <p className="aboutSpan">
               A modern take on golfing classics cementing itself in sports culture
@@ -52,7 +52,7 @@ const About: React.FC = () => {
               <source src={"/assets/brands/google.mp4"} type="video/mp4"/>
             </video>
           </figure>
-          <div className="xl:w-3/5 uppercase mt-6">
+          <div className="xl:w-3/5 uppercase mt-[1rem]">
             <h2 className="about-h2">Google Store</h2>
             <p className="aboutSpan">
               An ecommerce experience helping google bring its hardware to people across the globe

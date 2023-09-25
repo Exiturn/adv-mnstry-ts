@@ -200,5 +200,5 @@ html.lenis {
 }
 
 .aboutSpan {
-  @apply text-[0.8em] lg:text-[0.965em] uppercase mt-[1rem] leading-tight font-medium
+  @apply text-[0.8em] lg:text-[0.965em] uppercase leading-tight font-medium
 }

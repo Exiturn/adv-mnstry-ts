@@ -3,6 +3,7 @@ import Hero from "@/components/Hero/Hero";
 import About from "@/components/About/About";
 import Awards from "@/components/Awards/Awards";
 import Loader from "@/components/Loader/Loader";
+import Engagements from "@/components/Engagements/Engagements";
 import Lenis from "@studio-freight/lenis";
 import { useEffect } from "react";
 
@@ -24,6 +25,7 @@ const HomePage = () => {
       <Hero />
       <Awards />
       <About />
+      <Engagements />
       <Loader />
     </div>
   );
