@@ -1,5 +1,3 @@
-import Image from 'next/image';
-
 const About: React.FC = () => {
   return (
     <main className="w-screen pb-[10vw] px-[5.4vw] xl:px-[8rem]">

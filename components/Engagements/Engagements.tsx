@@ -1,13 +1,17 @@
+import { useCursorTracker } from "@/hooks/useCursorTracker";
+
 const Engagement: React.FC = () => {
     return (
-        <div></div>
+        <div>
+            
+        </div>
     )
 }
 
 const Engagements: React.FC = () => {
   return (
     <main className="w-screen pb-[10vw] px-[5.4vw] xl:px-[8rem]">
-        <section>
+        <section className="mb-[6em]">
             <figure className="h-[0.1em] w-full bg-black" />
             <div className="row flex justify-between items-center font-medium w-full">
                 <div className="col">
@@ -18,6 +22,10 @@ const Engagements: React.FC = () => {
                     <span className="text-[2em]">●</span>
                 </div>
             </div>
+        </section>
+
+        <section>
+            <h1 className="uppercase text-[3.5em] leading-[0.95] font-semibold mt-[2rem]">Featured <br />Engagements</h1>
         </section>
         
     </main>
