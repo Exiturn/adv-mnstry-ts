@@ -52,7 +52,7 @@ const Engagement: React.FC = () => {
 
   return (
     <div
-      className="h-[60vh] w-full flex overflow-x-auto scrollbar-hide space-x-[15em]"
+      className="h-[60vh] w-full flex overflow-x-auto scrollbar-hide space-x-[15em] list"
       ref={ref}
     >
       {engagementItems.map((item) => (
