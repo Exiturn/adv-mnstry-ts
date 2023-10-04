@@ -52,12 +52,12 @@ const Engagement: React.FC = () => {
 
   return (
     <div
-      className="h-[60vh] w-full flex overflow-x-auto scrollbar-hide space-x-[15em] list"
+      className="h-[55vh] w-full flex overflow-x-auto scrollbar-hide space-x-[5em] lg:space-x-[15em] list"
       ref={ref}
     >
       {engagementItems.map((item) => (
-        <li className="min-w-[25vw] flex flex-col justify-start" key={item.title}>
-          <section className="mb-[6.5em]">
+        <li className="min-w-[60vw] md:min-w-[25vw] flex flex-col justify-start" key={item.title}>
+          <section className="mb-[4em] md:mb-[6.5em]">
             <div>
               <Image
                 className={`mb-[1em] ${item.title === 'AT&T' ? 'w-[4em] h-[4em]' : 'w-[10em] h-[4em]'}`}
@@ -72,7 +72,7 @@ const Engagement: React.FC = () => {
           <h2 className="text-[1.5em] uppercase font-bold mb-[1em]">
             {item.title}
           </h2>
-          <p className="text-[1.25em] font-medium">
+          <p className="text-[1em] lg:text-[1.25em] font-medium">
             {item.paragraph}{" "}
             <a href="/" className="underline">
               here
@@ -90,18 +90,18 @@ const Engagements: React.FC = () => {
     <>
       <main className="w-screen pb-[10vw] px-[5.4vw] xl:px-[8rem]">
         <section className="mb-[6em]">
-          <figure className="h-[0.1em] w-full bg-black" />
+          <figure className="h-[0.05em] w-full bg-black" />
           <div className="row flex justify-between items-center font-medium w-full">
             <div className="col">00</div>
             <div className="col flex justify-between items-center w-[60%]">
               <span>/05</span>
-              <span className="text-[2em]">●</span>
+              <span className="text-[1em] md:text-[2em]">●</span>
             </div>
           </div>
         </section>
 
-        <section className="mb-[10em]">
-          <h1 className="uppercase text-[3.5em] leading-[0.95] font-semibold mt-[2rem]">
+        <section className="mb-[6em] md:mb-[10em]">
+          <h1 className="uppercase text-[2em] md:text-[3.5em] leading-[0.95] font-semibold mt-[2rem]">
             Featured <br />
             Engagements
           </h1>
