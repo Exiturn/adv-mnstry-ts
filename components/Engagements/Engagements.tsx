@@ -52,8 +52,9 @@ const Engagement: React.FC = () => {
 
   return (
     <div
-      className="h-[55vh] w-full flex overflow-x-auto scrollbar-hide space-x-[5em] lg:space-x-[15em] list"
+      className="h-[55vh] pb-[2em] w-full flex overflow-x-auto scrollbar-hide space-x-[5em] lg:space-x-[15em] list"
       ref={ref}
+      {...events}
     >
       {engagementItems.map((item) => (
         <li className="min-w-[60vw] md:min-w-[25vw] flex flex-col justify-start" key={item.title}>
@@ -67,7 +68,7 @@ const Engagement: React.FC = () => {
                 alt={item.alt}
               />
             </div>
-            <figure className="bg-black h-[0.1em] w-[2em] ml-2" />
+            <figure className={`bg-black h-[0.1em] w-[2em] ${item.title === 'Google' ? 'ml-2' : ''}`} />
           </section>
           <h2 className="text-[1.5em] uppercase font-bold mb-[1em]">
             {item.title}
