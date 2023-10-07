@@ -20,7 +20,7 @@ const Hero: React.FC = () => {
         <source src={"/video.mp4"} type="video/mp4" />
       </video>
       <div
-        className="relative flex justify-center items-center bg-[#f4f4f4] rounded-full w-[7rem] h-[7rem] p-4 uppercase text-center text-[0.8rem] font-bold leading-tight duration-75 ease-linear heroCta"
+        className="relative flex justify-center items-center bg-[#f4f4f4] rounded-full w-[7rem] h-[7rem] p-4 uppercase text-center text-[0.8rem] font-bold leading-tight duration-[50ms] ease-linear heroCta"
         style={{
           transform: `translate(${cursorPosition.x}px, ${cursorPosition.y}px)`,
         }}

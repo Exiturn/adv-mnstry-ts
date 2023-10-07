@@ -52,23 +52,32 @@ const Engagement: React.FC = () => {
 
   return (
     <div
-      className="h-[55vh] pb-[2em] w-full flex overflow-x-auto scrollbar-hide space-x-[5em] lg:space-x-[15em] list"
+      className="h-[45vh] md:h-[50vh] w-full flex overflow-x-auto scrollbar-hide space-x-[5em] lg:space-x-[15em] list cursor-none"
       ref={ref}
       {...events}
     >
       {engagementItems.map((item) => (
-        <li className="min-w-[60vw] md:min-w-[25vw] flex flex-col justify-start" key={item.title}>
+        <li
+          className="min-w-[60vw] md:min-w-[25vw] flex flex-col justify-start"
+          key={item.title}
+        >
           <section className="mb-[4em] md:mb-[6.5em]">
             <div>
               <Image
-                className={`mb-[1em] ${item.title === 'AT&T' ? 'w-[4em] h-[4em]' : 'w-[10em] h-[4em]'}`}
+                className={`mb-[1em] ${
+                  item.title === "AT&T" ? "w-[3em] h-[3em]" : "w-[8em] h-[3em]"
+                }`}
                 src={item.src}
                 width={100}
                 height={100}
                 alt={item.alt}
               />
             </div>
-            <figure className={`bg-black h-[0.1em] w-[2em] ${item.title === 'Google' ? 'ml-2' : ''}`} />
+            <figure
+              className={`bg-black h-[0.1em] w-[2em] ${
+                item.title === "Google" ? "ml-2" : ""
+              }`}
+            />
           </section>
           <h2 className="text-[1.5em] uppercase font-bold mb-[1em]">
             {item.title}
@@ -87,6 +96,9 @@ const Engagement: React.FC = () => {
 };
 
 const Engagements: React.FC = () => {
+  const targetRef = useRef(null);
+  const cursorPosition = useCursorTracker(targetRef);
+
   return (
     <>
       <main className="w-screen pb-[10vw] px-[5.4vw] xl:px-[8rem]">
@@ -106,10 +118,20 @@ const Engagements: React.FC = () => {
             Featured <br />
             Engagements
           </h1>
-        </section> 
-        <Engagement />
+        </section>
+
+        <section className="flex justify-center items-center cursor-none" ref={targetRef}>
+          <Engagement />
+          <div
+            className="w-[8em] h-[8em] bg-green-400 rounded-full uppercase flex justify-center items-center font-bold absolute pointer-events-none duration-[50ms] ease-linear"
+            style={{
+              transform: `translate(${cursorPosition.x}px, ${cursorPosition.y}px)`,
+            }}
+          >
+            Drag
+          </div>
+        </section>
       </main>
-     
     </>
   );
 };
