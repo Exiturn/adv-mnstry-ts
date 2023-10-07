@@ -123,7 +123,7 @@ const Engagements: React.FC = () => {
         <section className="flex justify-center items-center cursor-none" ref={targetRef}>
           <Engagement />
           <div
-            className="w-[8em] h-[8em] bg-green-400 rounded-full uppercase flex justify-center items-center font-bold absolute pointer-events-none duration-[50ms] ease-linear"
+            className="hidden w-[8em] h-[8em] bg-green-400 rounded-full uppercase lg:flex justify-center items-center font-bold absolute pointer-events-none duration-[50ms] ease-linear"
             style={{
               transform: `translate(${cursorPosition.x}px, ${cursorPosition.y}px)`,
             }}
