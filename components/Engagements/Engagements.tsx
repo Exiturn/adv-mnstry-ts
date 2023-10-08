@@ -1,6 +1,6 @@
 import { useCursorTracker } from "@/hooks/useCursorTracker";
 import Image from "next/image";
-import { useRef } from "react";
+import { useRef, useState, useEffect } from "react";
 import { useDraggable } from "react-use-draggable-scroll";
 
 interface IEngagementItem {
@@ -8,6 +8,11 @@ interface IEngagementItem {
   src: string;
   alt: string;
   paragraph: string;
+}
+
+interface IEngagementProps {
+  isHovered: boolean;
+  onHoverChange: (isHovered: boolean) => boolean;
 }
 
 const engagementItems: IEngagementItem[] = [
@@ -45,10 +50,18 @@ const engagementItems: IEngagementItem[] = [
   },
 ];
 
-const Engagement: React.FC = () => {
+const Engagement = ({ isHovered, onHoverChange }: IEngagementProps): JSX.Element => {
   const ref =
     useRef<HTMLDivElement>() as React.MutableRefObject<HTMLInputElement>;
   const { events } = useDraggable(ref);
+
+  const handleMouseEnter = () => {
+    onHoverChange(true);
+  }
+
+  const handleMouseLeave = () => {
+    onHoverChange(false);
+  }
 
   return (
     <div
@@ -84,7 +97,7 @@ const Engagement: React.FC = () => {
           </h2>
           <p className="text-[1em] lg:text-[1.25em] font-medium">
             {item.paragraph}{" "}
-            <a href="/" className="underline">
+            <a href="/" className="underline" onMouseEnter={handleMouseEnter} onMouseLeave={handleMouseLeave}>
               here
             </a>
             .
@@ -98,6 +111,16 @@ const Engagement: React.FC = () => {
 const Engagements: React.FC = () => {
   const targetRef = useRef(null);
   const cursorPosition = useCursorTracker(targetRef);
+  const [isHovered, setIsHovered] = useState<boolean>(false);
+
+  const handleHoverChange = (newIsHovered: boolean): boolean => {
+    setIsHovered(newIsHovered);
+    return true;
+  }
+
+  useEffect(() => {
+    console.log(isHovered);
+  }, [isHovered])
 
   return (
     <>
@@ -121,14 +144,14 @@ const Engagements: React.FC = () => {
         </section>
 
         <section className="flex justify-center items-center cursor-none" ref={targetRef}>
-          <Engagement />
+          <Engagement isHovered={isHovered} onHoverChange={handleHoverChange}/>
           <div
-            className="hidden w-[8em] h-[8em] bg-green-400 rounded-full uppercase lg:flex justify-center items-center font-bold absolute pointer-events-none duration-[50ms] ease-linear"
+            className={`hidden w-[8em] h-[8em] bg-[#f9cdcd] rounded-full uppercase lg:flex justify-center items-center font-bold absolute pointer-events-none duration-[50ms] ease-linear ${isHovered === true ? 'opacity-25' : 'opacity-100'}`}
             style={{
               transform: `translate(${cursorPosition.x}px, ${cursorPosition.y}px)`,
             }}
           >
-            Drag
+            {isHovered === false ? 'Drag': ''}
           </div>
         </section>
       </main>

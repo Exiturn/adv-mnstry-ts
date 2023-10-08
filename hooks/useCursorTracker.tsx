@@ -12,7 +12,7 @@ export const useCursorTracker = (targetRef: React.RefObject<HTMLDivElement>) => 
     if (targetRef.current) {
         const bounds: DOMRect = targetRef.current.getBoundingClientRect();
         const centerX: GLfloat = bounds.width / 2;
-        const centerY: number = bounds.height / 2;
+        const centerY: GLfloat = bounds.height / 2;
         const x: number = e.clientX - bounds.left - centerX;
         const y: number = e.clientY - bounds.top - centerY;
         setCursorPos({ x, y});
