@@ -23,7 +23,7 @@ export default function RootLayout({ children }: RootLayoutProps): JSX.Element {
     <html lang="en">
       <body className={`${inter.className}`}>
         <div className='bg' />
-        <Navbar />
+        {/* <Navbar /> */}
         {children}
       </body>
     </html>

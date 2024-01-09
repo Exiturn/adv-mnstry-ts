@@ -1,4 +1,5 @@
 const About: React.FC = () => {
+  
   return (
     <main className="w-screen pb-[10vw] px-[5.4vw] xl:px-[8rem]">
       <figure className="h-[0.1em] w-full bg-black mb-[8.5em]" />
@@ -10,7 +11,7 @@ const About: React.FC = () => {
             products, services, and eCommerce experiences that turn cultural
             values into company value.
           </span>
-          <button className="aboutButton relative w-[40vw] h-[4vh] md:w-[20em] rounded-full border-[1px] py-[0.25rem] px-[2.5vw] mt-[4em] border-black text-center text-[0.75em] md:text-[1em] font-bold uppercase overflow-y-hidden z-2 transition-colors delay-0 hover:delay-[175ms] duration-200 hover:text-white">
+          <button className="styleButton tracking-[-0.075em] relative w-[40vw] h-[3vh] md:w-[15em] rounded-full border-[1px] py-[0.25rem] px-[1.5vw] mt-[4em] border-black text-center text-[0.75em] md:text-[1em] font-bold uppercase overflow-y-hidden z-2 transition-colors delay-0 hover:delay-[175ms] duration-200 hover:text-white">
             See the work
           </button>
         </div>

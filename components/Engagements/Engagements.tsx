@@ -34,7 +34,7 @@ const engagementItems: IEngagementItem[] = [
     title: "Manors Golf",
     src: "/assets/brands/manorsgolflogo.webp",
     alt: "Manors Golf Logo",
-    paragraph: `A reimagining of Manors Golf's brand visual identity, and brand campaign, to support a new product drop and the launch of the first brick and mortar retail locatio in the brand's recent history. Read our full case study `,
+    paragraph: `A reimagining of Manors Golf's brand visual identity, and brand campaign, to support a new product drop and the launch of the first brick and mortar retail location in the brand's recent history. Read our full case study `,
   },
   {
     title: "AT&T",

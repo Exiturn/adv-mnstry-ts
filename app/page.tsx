@@ -7,6 +7,7 @@ import Engagements from "@/components/Engagements/Engagements";
 import Spotlight from "@/components/Spotlight/Spotlight";
 import Lenis from "@studio-freight/lenis";
 import { useEffect } from "react";
+import Navbar from "@/components/Navbar/Navbar";
 
 const HomePage = () => {
   useEffect( () => {
@@ -23,6 +24,7 @@ const HomePage = () => {
 
   return (
     <div className="relative">
+      <Navbar />
       <Hero />
       <Awards />
       <About />
