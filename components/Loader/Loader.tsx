@@ -39,7 +39,7 @@ const Loader: React.FC = () => {
         duration: 0.1,
         ease: [0.42, 0, 0.58, 1] 
       }}
-      className="w-screen h-screen flex justify-center items-center absolute top-0 left-0 transition-all duration-700 bg-white z-[3]"
+      className="w-screen h-screen flex justify-center items-center fixed top-0 left-0 transition-all duration-700 bg-white z-[3]"
     >
       <h1 className="text-[10vw]">
         <p className="font-bold leading-tight">ADV<br />/ MNSTRY<span className="text-[3vw]">®</span></p>
