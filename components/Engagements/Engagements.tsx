@@ -124,7 +124,7 @@ const Engagements: React.FC = () => {
 
   return (
     <>
-      <main className="w-screen pb-[10vw] px-[5.4vw] xl:px-[8rem]">
+      <main className="w-screen pb-[10vw] px-[5.4vw] lg:px-[3vw]">
         <section className="mb-[6em]">
           <figure className="h-[0.05em] w-full bg-black" />
           <div className="row flex justify-between items-center font-medium w-full">
@@ -137,7 +137,7 @@ const Engagements: React.FC = () => {
         </section>
 
         <section className="mb-[6em] md:mb-[10em]">
-          <h1 className="uppercase text-[2em] md:text-[3.5em] leading-[0.95] font-semibold mt-[2rem]">
+          <h1 className="uppercase text-[2em] md:text-[3.5em] leading-[0.95] font-bold mt-[2rem]">
             Featured <br />
             Engagements
           </h1>

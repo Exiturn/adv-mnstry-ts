@@ -1,8 +1,8 @@
 const About: React.FC = () => {
   
   return (
-    <main className="w-screen pb-[10vw] px-[5.4vw] xl:px-[8rem]">
-      <figure className="h-[0.1em] w-full bg-black mb-[8.5em]" />
+    <main className="w-screen pb-[10vw] px-[5.4vw] lg:px-[3vw]">
+      <figure className="h-[0.1px] w-full bg-black mb-[8.5em]" />
 
       <section className="flex flex-col xl:flex-row items-start xl:items-center gap-5">
         <div className="w-full md:w-[50vw] flex flex-col justify-evenly items-start">
@@ -11,7 +11,7 @@ const About: React.FC = () => {
             products, services, and eCommerce experiences that turn cultural
             values into company value.
           </span>
-          <button className="styleButton tracking-[-0.075em] relative w-[40vw] h-[3vh] md:w-[15em] rounded-full border-[1px] py-[0.25rem] px-[1.5vw] mt-[4em] border-black text-center text-[0.75em] md:text-[1em] font-bold uppercase overflow-y-hidden z-2 transition-colors delay-0 hover:delay-[175ms] duration-200 hover:text-white">
+          <button className="styleButton tracking-[-0.075em] relative w-[40vw] h-[3.6vh] md:w-[12.5em] rounded-full border-[1px] py-[0.25rem] mt-[4em] border-black text-center text-[0.75em] md:text-[1em] font-bold uppercase overflow-y-hidden z-2 transition-colors delay-0 hover:delay-[175ms] duration-200 hover:text-white">
             See the work
           </button>
         </div>
