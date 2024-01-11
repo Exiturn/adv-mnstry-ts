@@ -23,9 +23,9 @@ const News: React.FC = () => {
           <>
             <li
               key={article.id}
-              className="flex items-center w-full h-[40vh] pt-4 hover:cursor-pointer newsItem"
+              className="flex items-center w-full h-[28vh] lg:h-[40vh] pt-4 hover:cursor-pointer newsItem"
             >
-              <figure className="min-w-[32.5%] h-full overflow-hidden relative transition-transform ease-in-out">
+              <figure className="min-w-[50%] sm:min-w-[40%] lg:min-w-[32.5%] h-full overflow-hidden relative transition-transform ease-in-out">
                 <Image
                   className="test scale-[1.05] hover:scale-100 transition-transform duration-300"
                   src={article.image}
@@ -36,7 +36,7 @@ const News: React.FC = () => {
               </figure>
 
               <div className="flex flex-col justify-between items-start w-full h-full pl-6 relative">
-                <h1 className="uppercase w-[75%] text-[2em] md:text-[3.5em] leading-[0.95] tracking-tight font-medium">
+                <h1 className="uppercase w-[75%] text-[1em] sm:text-[1.5em] md:text-[2em] lg:text-[3.5em] leading-[0.95] tracking-tight font-medium">
                   {article.title}
                 </h1>
 
@@ -45,9 +45,9 @@ const News: React.FC = () => {
                 </p>
 
                 <figure className="absolute right-0 top-0">
-                  <div className="flex overflow-hidden w-[2.35rem] h-[2.35rem] arrowDiv">
+                  <div className="flex overflow-hidden w-[1rem] md:w-[1.5rem] lg:w-[2.35rem] h-[1.5rem] lg:h-[2.35rem] arrowDiv">
                     <svg
-                      className="arrowSvg1 transition-all translate-x-[-2.35rem] ease-in-out  min-w-full"
+                      className="arrowSvg1 transition-all translate-x-[-100%] ease-in-out  min-w-full"
                       xmlns="http://www.w3.org/2000/svg"
                       viewBox="0 0 17 17"
                     >
@@ -56,7 +56,7 @@ const News: React.FC = () => {
                       <path d="m7 15.6 8.5-8.5 1.4 1.4L8.4 17 7 15.6z"></path>
                     </svg>
                     <svg
-                      className="arrowSvg2 transition-all translate-x-[-2.35rem] ease-in-out  min-w-full"
+                      className="arrowSvg2 transition-all translate-x-[-100%] ease-in-out  min-w-full"
                       xmlns="http://www.w3.org/2000/svg"
                       viewBox="0 0 17 17"
                     >
@@ -68,7 +68,7 @@ const News: React.FC = () => {
                 </figure>
               </div>
             </li>
-            <figure className="h-[0.1px] w-full bg-black mt-[6em]" />
+            <figure className="h-[0.1px] w-full bg-black mt-[5vh] sm:mt-[10vh]" />
           </>
         ))}
       </ul>
