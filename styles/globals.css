@@ -227,6 +227,10 @@ html.lenis {
   text-decoration: underline;
 }
 
+.newsItem:hover > .test {
+  @apply scale-[1.05] hover:scale-100 transition-transform duration-300
+}
+
 .newsArrow:hover {
   animation: arrowAnim  1.5s linear forwards
 }
