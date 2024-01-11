@@ -6,10 +6,10 @@ const Spotlight: React.FC = () => {
     var sticky = new Sticky('.selector');
   }, []);
   return (
-    <section className="w-screen pb-[10vw] px-[5.4vw] lg:px-[3vw]">
+    <section className="w-screen pb-[20vh] md:pb-[10vw] px-[5.4vw] lg:px-[3vw]">
       <div className="w-full flex flex-col-reverse md:flex-row justify-end items-start" data-sticky-container>
-        <main className="md:w-[50%] w-full selector" data-margin-top='120'>
-          <h1 className="text-[2em] md:text-[5vw] leading-[1] font-bold">
+        <main className="pt-[10vw] md:pt-0 md:w-[50%] w-full selector" data-margin-top='120'>
+          <h1 className="text-[2.5em] md:text-[5vw] leading-[1] font-bold">
             ADV/MNSTRY® <br /> HELPS <br /> BRANDS{" "}
             <span className="text-[1.25em]">●</span> <br /> CONNECT W/ CULTURE
           </h1>
