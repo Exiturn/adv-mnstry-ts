@@ -11,7 +11,7 @@ const Footer:React.FC = () => {
         </div>
 
         <div className="w-1/2">
-          <p className="w-[70%] text-[2em] font-medium leading-[1]">
+          <p className="w-[85%] text-[2em] font-medium leading-[1]">
             We collaborate with ambitious brands and people. <br /> Let&apos;s
             build.{" "}
             <span className="underline hover:cursor-pointer">
@@ -24,7 +24,7 @@ const Footer:React.FC = () => {
       <section className="text-[#f4f4f4] mt-[5vw] flex justify-between gap-x-[5vw]">
         <div className="flex flex-col w-1/2">
           <div className="w-[85%]">
-            <h3 className="footer_header uppercase text-[1.25em] font-medium">
+            <h3 className="footer_header uppercase text-[1.4em] font-medium">
               Stay in the know
             </h3>
 
@@ -60,9 +60,9 @@ const Footer:React.FC = () => {
         <div className="w-1/2 flex">
           {lists.map((list) => (
             <div key={list.id} className="w-1/3">
-              <h3 className="footer_header uppercase text-[1.25em] font-medium">{list.title}</h3>
-            <ul>
-              {list.items.map((item) => <li key={item}>{item}</li>)}
+              <h3 className="footer_header uppercase text-[1.4em] font-medium">{list.title}</h3>
+            <ul className="mt-5">
+              {list.items.map((item) => <li key={item} className="text-[1.4em] font-[400] hover:underline hover:cursor-pointer">{item}</li>)}
             </ul>
             </div>
           ))}

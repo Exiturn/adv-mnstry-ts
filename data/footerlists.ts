@@ -21,7 +21,7 @@ const footerlists: List[] = [
         items: [
             'Crafted',
             'Applied',
-            'Bradnbeats',
+            'Brandbeats',
             'Moves',
             'A®/Mazing'
         ]
