@@ -40,5 +40,6 @@ const footerlists: List[] = [
             'Argentina - AR'
         ]
     },
-
 ]
+
+export default footerlists;

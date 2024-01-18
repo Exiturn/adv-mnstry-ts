@@ -1,4 +1,8 @@
-const Footer = () => {
+import { List } from "@/data/footerlists";
+
+const Footer:React.FC = () => {
+  const lists: List[] = require("@/data/footerlists").default;
+
   return (
     <footer className="w-full h-auto bg-[#252422] px-[5.4vw] lg:px-[3vw] py-[5vw]">
       <section className="text-[#f4f4f4] flex justify-between items-start gap-x-[5vw]">
@@ -54,26 +58,14 @@ const Footer = () => {
         </div>
 
         <div className="w-1/2 flex">
-          <div className="w-1/3">
-            <h3 className="footer_header uppercase text-[1.25em] font-medium">Social</h3>
+          {lists.map((list) => (
+            <div key={list.id} className="w-1/3">
+              <h3 className="footer_header uppercase text-[1.25em] font-medium">{list.title}</h3>
             <ul>
-
+              {list.items.map((item) => <li key={item}>{item}</li>)}
             </ul>
-          </div>
-
-          <div className="w-1/3">
-          <h3 className="footer_header uppercase text-[1.25em] font-medium">Initiatives</h3>
-            <ul>
-
-            </ul>
-          </div>
-
-          <div className="w-1/3">
-          <h3 className="footer_header uppercase text-[1.25em] font-medium">Offices</h3>
-            <ul>
-
-            </ul>
-          </div>
+            </div>
+          ))}
         </div>
       </section>
     </footer>
