@@ -8,6 +8,10 @@
     #f9cdcd
     #f4f4f4
     #222020
+
+    FOOTER COLORS
+    #252422
+    #191918
 */
 
 * {
@@ -70,7 +74,7 @@ html.lenis {
 }
 
 .styleButton:after {
-  content: '';
+  content: "";
   position: absolute;
   z-index: -1;
   left: 0;
@@ -162,10 +166,10 @@ html.lenis {
   ///// AWARDS STYLES /////
 */
 .awardAnchor {
-  @apply inline-flex w-full flex-col justify-center items-center decoration-2 hover:underline
+  @apply inline-flex w-full flex-col justify-center items-center decoration-2 hover:underline;
 }
 .awardFigure {
-  @apply sm:w-[75%] md:w-[55%] lg:w-[40%] min-h-[50px] md:min-h-[8vw] transition-transform ease-in-out hover:scale-[1.05] flex items-center
+  @apply sm:w-[75%] md:w-[55%] lg:w-[40%] min-h-[50px] md:min-h-[8vw] transition-transform ease-in-out hover:scale-[1.05] flex items-center;
 }
 
 /* 
@@ -185,23 +189,23 @@ html.lenis {
 }
 
 .about-li:hover h2 {
-  @apply underline
+  @apply underline;
 }
 
-.about-li:hover figure> video {
-  @apply scale-[1]
+.about-li:hover figure > video {
+  @apply scale-[1];
 }
 
-.about-li:hover figure> img {
-  @apply scale-[1]
+.about-li:hover figure > img {
+  @apply scale-[1];
 }
 
 .about-h2 {
-  @apply text-[1.5em] md:text-[2em] font-semibold
+  @apply text-[1.5em] md:text-[2em] font-semibold;
 }
 
 .aboutSpan {
-  @apply text-[0.8em] lg:text-[0.965em] uppercase leading-tight font-medium
+  @apply text-[0.8em] lg:text-[0.965em] uppercase leading-tight font-medium;
 }
 
 /* 
@@ -228,11 +232,11 @@ html.lenis {
 }
 
 .newsItem:hover > .test {
-  @apply scale-[1.05] hover:scale-100 transition-transform duration-300
+  @apply scale-[1.05] hover:scale-100 transition-transform duration-300;
 }
 
 .newsArrow:hover {
-  animation: arrowAnim  1.5s linear forwards
+  animation: arrowAnim 1.5s linear forwards;
 }
 
 .newsItem:hover > div > figure > div > .arrowSvg1 {
@@ -250,4 +254,47 @@ html.lenis {
   }
 }
 
+/* 
+  ///// FOOTER STYLES /////
+*/
 
+.footer_header::before {
+  margin-right: 0.5em;
+  content: "●";
+  font-size: 1.4rem;
+}
+
+.footer_input:focus {
+  outline: none;
+}
+
+.footer_input::placeholder {
+  letter-spacing: 0.025em;
+  font-weight: 400;
+  color: #f4f4f4;
+}
+
+.footer_input_div::after {
+  position: absolute;
+  display: block;
+  top: 100%;
+  left: 0;
+  width: 100%;
+  height: 0.2rem;
+  background-color: currentcolor;
+  content: "";
+  transform: scaleY(0.3);
+  transform-origin: 50% 0;
+  transition: transform 0.25s var(--ease-garret);
+}
+
+.footer_input_div:focus-within::after {
+  transform: scaleY(0.6);
+}
+
+.footer_svg {
+  display: block;
+  width: 100%;
+  height: 100%;
+  fill: currentcolor;
+}

@@ -6,6 +6,7 @@ import Loader from "@/components/Loader/Loader";
 import Engagements from "@/components/Engagements/Engagements";
 import Spotlight from "@/components/Spotlight/Spotlight";
 import News from "@/components/News/News";
+import Footer from "@/components/Footer/Footer";
 import Lenis from "@studio-freight/lenis";
 import { useEffect } from "react";
 import Navbar from "@/components/Navbar/Navbar";
@@ -32,6 +33,7 @@ const HomePage = () => {
       <Engagements />
       <Spotlight />
       <News />
+      <Footer />
       <Loader />
     </div>
   );
