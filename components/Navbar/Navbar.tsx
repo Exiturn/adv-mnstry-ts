@@ -39,8 +39,12 @@ const navbarAnimation = {
     translateY: "-50vh",
   },
 };
+interface NavbarProps {
+  textColour: string;
+  bgColour: string;
+}
 
-export default function Navbar() {
+const Navbar: React.FC<NavbarProps> = ({ textColour, bgColour }) => {
   const dynamicPadding = { padding: "calc(0.5rem + 2.5vh) 3vw" };
   const [isAnimating, setIsAnimating] = useState<boolean>(false);
   const [navbarStyle, setNavbarStyle] = useState<Object>({});
@@ -65,8 +69,8 @@ export default function Navbar() {
   
       if (scrollY > halfwayPoint) {
         const newNavbarStyle = {
-          background: '#f4f4f4',
-          color: 'black',
+          background: bgColour,
+          color: textColour,
         };
   
         setNavbarStyle(newNavbarStyle);
@@ -120,3 +124,5 @@ export default function Navbar() {
     </motion.nav>
   );
 };
+
+export default Navbar;

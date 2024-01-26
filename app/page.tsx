@@ -8,11 +8,12 @@ import Spotlight from "@/components/Spotlight/Spotlight";
 import News from "@/components/News/News";
 import Footer from "@/components/Footer/Footer";
 import Lenis from "@studio-freight/lenis";
-import { useEffect } from "react";
 import Navbar from "@/components/Navbar/Navbar";
+import { useEffect, useState } from "react";
+import styled from "styled-components";
 
 const HomePage = () => {
-  useEffect( () => {
+  useEffect(() => {
     window.scrollTo(0, 0);
     const lenis = new Lenis();
 
@@ -24,9 +25,21 @@ const HomePage = () => {
     requestAnimationFrame(raf);
   }, []);
 
+  const [textColour, setTextColor] = useState('black');
+  const [bgColour, setBgColour] = useState('#f4f4f4');
+
+  const StyledLayoutProps = styled.div<{ $textColour?: string, $bgColour?: string }>`
+    --grid-width: 751px;
+    --grid-height: 788px;
+    --text-color: ${props => props.$textColour || "black"};
+    --background-color: ${props => props.$bgColour};
+
+    /* Additional global styles if needed */
+  `;
+
   return (
-    <div className="relative">
-      <Navbar />
+    <StyledLayoutProps className="relative" $textColour={textColour} $bgColour={bgColour}>
+      <Navbar textColour={textColour} bgColour={bgColour} />
       <Hero />
       <Awards />
       <About />
@@ -35,7 +48,7 @@ const HomePage = () => {
       <News />
       <Footer />
       <Loader />
-    </div>
+    </StyledLayoutProps>
   );
 };
 
