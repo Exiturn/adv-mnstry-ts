@@ -7,7 +7,7 @@ const Hero: React.FC = () => {
   const cursorPosition = useCursorTracker(targetRef);
   return (
     <div
-      className="w-screen h-screen relative flex justify-center items-center overflow-hidden cursor-none"
+      className="w-screen h-screen relative flex justify-center items-center overflow-hidden cursor-none z-10"
       ref={targetRef}
     >
       <video

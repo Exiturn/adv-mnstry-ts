@@ -89,7 +89,7 @@ const Navbar: React.FC<NavbarProps> = ({ textColour, bgColour }) => {
 
   return (
     <motion.nav
-      className={`fixed flex justify-between items-center bg-transparent text-white w-screen z-[3] text-center transition-colors ease-in-out duration-500`}
+      className={`fixed flex justify-between items-center bg-transparent text-white w-screen z-[11] text-center transition-colors ease-in-out duration-500`}
       style={{...dynamicPadding, ...navbarStyle}}
       initial="initial"
       animate={isAnimating ? `animate` : `initial`}
