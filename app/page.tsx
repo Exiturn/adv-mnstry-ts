@@ -9,7 +9,7 @@ import News from "@/components/News/News";
 import Footer from "@/components/Footer/Footer";
 import Lenis from "@studio-freight/lenis";
 import Navbar from "@/components/Navbar/Navbar";
-import { useLayoutEffect, useEffect, useState, useRef, FC } from "react";
+import { useEffect, useState, useRef, FC } from "react";
 import styled from "styled-components";
 import gsap from "gsap";
 import { ScrollTrigger } from "gsap/ScrollTrigger";
@@ -27,8 +27,7 @@ const HomePage = () => {
     }
 
     requestAnimationFrame(raf);
-
-    
+    colourTransition();
   }, []);
 
   const colourTransition = () => {
@@ -41,25 +40,25 @@ const HomePage = () => {
         end: "bottom 20%",
         markers: false,
         onToggle: () => {
-          // setTextColor("#f9cdcdff");
-          // setBgColour("#252422ff");
+          setTextColor("#f9cdcdff");
+          setBgColour("#252422ff");
           console.log("target entered");
         },
         onLeave: () => {
-          // setTextColor("black");
-          // setBgColour("#f4f4f4");
+          setTextColor("black");
+          setBgColour("#f4f4f4");
           console.log("target left");
         },
         onEnterBack: () => {
-          // setTextColor("#f9cdcdff");
-          // setBgColour("#252422ff");
+          setTextColor("#f9cdcdff");
+          setBgColour("#252422ff");
           console.log("target entered");
         },
         onLeaveBack: () => {
-          // setTextColor("black");
-          // setBgColour("#f4f4f4");
+          setTextColor("black");
+          setBgColour("#f4f4f4");
           console.log("target left");
-        }
+        },
       },
     });
 
@@ -86,26 +85,29 @@ const HomePage = () => {
     /* Additional global styles if needed */
     color: var(--text-color);
     background-color: var(--background-color);
+    transition: color 0.3s ease, background-color 0.3s ease;
   `;
 
   return (
-    <StyledLayoutProps
-      className="relative"
-      $textColour={textColour}
-      $bgColour={bgColour}
-    >
-      <Navbar textColour={textColour} bgColour={bgColour} />
-      <Hero />
-      <Awards />
-      <About />
-      <Engagements />
-      <div ref={targetRef}>
-        <Spotlight textColour={textColour} />
-      </div>
-      <News />
-      <Footer />
+    <>
+      <StyledLayoutProps
+        className="relative"
+        $textColour={textColour}
+        $bgColour={bgColour}
+      >
+        <Navbar textColour={textColour} bgColour={bgColour} />
+        <Hero />
+        <Awards />
+        <About />
+        <Engagements />
+        <div ref={targetRef}>
+          <Spotlight textColour={textColour} />
+        </div>
+        <News />
+        <Footer />
+      </StyledLayoutProps>
       <Loader />
-    </StyledLayoutProps>
+    </>
   );
 };
 
