@@ -29,7 +29,7 @@ const Spotlight: React.FC<spotlightProps> = ({ textColour }) => {
             ADWEEK <span className="font-extrabold">AGENCY SPOTLIGHT</span>
           </h3>
 
-          <button style={{ borderColor: textColour }} className={`styleButton tracking-[-0.075em] relative w-[40vw] h-[3.6vh] md:w-[10em] rounded-full border-[1px] py-[0.25rem] mt-[4em] text-center text-[0.75em] md:text-[1em] font-bold uppercase overflow-y-hidden z-2 transition-colors delay-0 hover:delay-[175ms] duration-200 hover:text-white`}>
+          <button style={{ borderColor: textColour }} className={`styleButton tracking-[-0.075em] relative w-[40vw] h-[3.6vh] md:w-[10em] rounded-full border-[1px] py-[0.25rem] mt-[4em] text-center text-[0.75em] md:text-[1em] font-bold uppercase overflow-y-hidden transition-colors delay-0 hover:delay-[175ms] duration-200 hover:text-white`}>
             About Us
           </button>
         </main>

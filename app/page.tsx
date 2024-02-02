@@ -27,7 +27,7 @@ const HomePage = () => {
     }
 
     requestAnimationFrame(raf);
-    colourTransition();
+    // colourTransition();
   }, []);
 
   const colourTransition = () => {
@@ -85,7 +85,7 @@ const HomePage = () => {
     /* Additional global styles if needed */
     color: var(--text-color);
     background-color: var(--background-color);
-    transition: color 0.3s ease, background-color 0.3s ease;
+    transition: all 0.3s ease, background-color 0.3s ease;
   `;
 
   return (
