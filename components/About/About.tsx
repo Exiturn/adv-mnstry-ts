@@ -11,7 +11,7 @@ const About: React.FC = () => {
             products, services, and eCommerce experiences that turn cultural
             values into company value.
           </span>
-          <button className="styleButton tracking-[-0.075em] relative w-[40vw] h-[3.6vh] md:w-[12.5em] rounded-full border-[1px] py-[0.25rem] mt-[4em] border-black text-center text-[0.75em] md:text-[1em] font-bold uppercase overflow-y-hidden z-2 transition-colors delay-0 hover:delay-[175ms] duration-200 hover:text-white">
+          <button className="styleButton w-[40vw] md:w-[12.5em] ">
             See the work
           </button>
         </div>
